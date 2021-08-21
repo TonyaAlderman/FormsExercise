@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Feedback Form">
+    <title>Survey</title>
+</head>
+
+<body>
+    <form>
+        <fieldset>
+            <legend>Customer Experience Survey</legend>
+            <br>
+            <label for="storeNumber">Store Number</label>
+            <select id="storeNumber">
+                <option hidden>Select A Store</option>
+                <option>3109</option>
+                <option>2421</option>
+                <option>5357</option>
+            </select>
+            <br><br>
+            <fieldset>
+                <legend>When you visited</legend>
+                <label for="visited">Date Visited</label>
+                <input type="date" id="visited" value="2021-mm-dd" min="2021-01-01" max="2021-12-31">>
+                <br><br>
+                <label for="time">Time</label>
+                <input type="time">
+            </fieldset>
+            <br>
+            <label for="name">Full Name:</label>
+            <input type="name" placeholder="Name">
+            <br><br>
+            <label for="email">Email:</label>
+            <input type="email" placeholder="Email">
+            <br><br>
+            <fieldset>
+                <legend>Gender</legend>
+                <div>
+                    <input type="radio" name="gender" id="male">
+                    <label for="male">Male</label>
+                </div>
+                <div>
+                    <input type="radio" name="gender" id="female" checked>
+                    <label for="female">Female</label>
+                </div>
+            </fieldset>
+            <br>
+            <label for="experience">Tell us about your experience:</label>
+            <br>
+            <textarea id="experience" cols="20" rows="2"></textarea>
+            <br><br>
+            <label for="times">Times visited in the last month:</label>
+            <br>
+            <input type="number" id="times" min="1" max="30">
+            <br><br>
+            <input type="checkbox" id="contact" required>
+            <label for="contact">Please check the box if you would be willing to be contacted about your
+                experience</label>
+            <br><br>
+            <label for="pswrd">Password</label>
+            <input type="password" id="pswrd" minlength="5" maxlength="10"
+            required oninvalid="setCustomValidity('Please match the requested format. Please enter a password that is 5 to 10 characters in length')">
+            <br><br>
+            <input type="reset" value="Reset">
+            <input type="submit" value="Submit">
+        </fieldset>
+    </form>
+</body>
+
+</html>
